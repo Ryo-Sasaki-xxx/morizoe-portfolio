@@ -19,7 +19,7 @@ export const Header = (props) => {
     }
 
     return (
-        <SHeader $backgroundColor={"red"}>
+        <SHeader>
             <SH1><SA1 to="/" $color={color}>Morizoe's Portfolio</SA1></SH1>
             <SDiv>
                 <SA2 href="https://instagram.com/" target="_blank"><SImg src={srcInstagram} alt="isntagramリンク" /></SA2>
@@ -115,7 +115,6 @@ const SSpan1 = styled.span`
     background-color: ${props => props.$backgroundColor};
     transition: .3s;
     ${props => props.$isActiveMenue && "transform: translate(0, 0.4rem) rotate(-45deg);"}
-    // ${props => props.$isActiveMenue && "width: 2.5rem;"}
 `;
 
 const SSpan2 = styled.span`
@@ -138,5 +137,4 @@ const SSpan3 = styled.span`
     background-color: ${props => props.$backgroundColor};
     transition: .3s;
     ${props => props.$isActiveMenue && "transform: translate(0, -0.6rem) rotate(45deg);"}
-    // ${props => props.$isActiveMenue && "width: 2.5rem;"}
 `;
