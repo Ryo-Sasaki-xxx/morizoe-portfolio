@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import { Menu } from "./Menue";
+
 export const Header = (props) => {
     const [isActiveMenue, setIsActiveMenue] = useState(false);
     const theme = props.theme;
@@ -11,26 +13,29 @@ export const Header = (props) => {
     if (theme === "white") {
         srcInstagram = "/instagram-white.svg";
         srcX = "/x-white.svg";
-        color = "#fff"
+        color = "#fff";
     } else {
         srcInstagram = "/instagram-dark.svg";
         srcX = "/x-dark.svg";
-        color = "#333"
+        color = "#333";
     }
 
     return (
-        <SHeader>
-            <SH1><SA1 to="/" $color={color}>Morizoe's Portfolio</SA1></SH1>
-            <SDiv>
-                <SA2 href="https://instagram.com/" target="_blank"><SImg src={srcInstagram} alt="isntagramリンク" /></SA2>
-                <SA2 href="https://x.com/" target="_blank"><SImg src={srcX} alt="Xリンク" /></SA2>
-                <SButton onClick={() => setIsActiveMenue((prev) => !prev)} >
-                    <SSpan1 $isActiveMenue={isActiveMenue} $backgroundColor={color} />
-                    <SSpan2 $isActiveMenue={isActiveMenue} $backgroundColor={color} />
-                    <SSpan3 $isActiveMenue={isActiveMenue} $backgroundColor={color} />
-                </SButton>
-            </SDiv>
-        </SHeader>
+        <>
+            <SHeader>
+                <SH1><SA1 to="/" $color={color}>Morizoe's Portfolio</SA1></SH1>
+                <SDiv>
+                    <SA2 href="https://instagram.com/" target="_blank"><SImg src={srcInstagram} alt="isntagramリンク" /></SA2>
+                    <SA2 href="https://x.com/" target="_blank"><SImg src={srcX} alt="Xリンク" /></SA2>
+                    <SButton onClick={() => setIsActiveMenue((prev) => !prev)} >
+                        <SSpan1 $isActiveMenue={isActiveMenue} $backgroundColor={color} />
+                        <SSpan2 $isActiveMenue={isActiveMenue} $backgroundColor={color} />
+                        <SSpan3 $isActiveMenue={isActiveMenue} $backgroundColor={color} />
+                    </SButton>
+                </SDiv>
+            </SHeader>
+            <Menu isActiveMenue={isActiveMenue} setIsActiveMenue={setIsActiveMenue} theme={theme} />
+        </>
     );
 };
 
@@ -45,6 +50,7 @@ const SHeader = styled.header`
     justify-content: space-between;
     align-items: center;
     text-align: center;
+    z-index: 99;
 `;
 
 const SH1 = styled.h1`
