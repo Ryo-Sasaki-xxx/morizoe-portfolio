@@ -45,10 +45,11 @@ export const Menu = (props) => {
     );
 };
 
-const SNav = styled.div`
+const SNav = styled.nav`
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 98;
     height: 100vh;
     width: 100%;
     background: ${props => props.$background};

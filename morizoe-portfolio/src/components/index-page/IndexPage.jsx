@@ -1,12 +1,11 @@
-import { Outlet } from "react-router-dom";
-
 import { Header } from "../global/Header";
+import { Top } from "./Top";
 
 export const IndexPage = () => {
     return (
         <>
             <Header theme={"white"} />
-            <Outlet />
+            <Top />
         </>
     );
 };
