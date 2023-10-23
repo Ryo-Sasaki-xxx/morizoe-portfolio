@@ -6,13 +6,13 @@ import { SeeMore } from "./SeeMore";
 import { Rectangle } from "./Rectangle";
 
 
-export const Profile = () => {
+export const WithGRIT = () => {
     return (
         <SSection>
-            <Rectangle src="baby.png" />
+            <Rectangle src="with-grit.png" />
             <SDiv>
-                <Title title="Profile" width={33} beforeHeight={5} />
-                <SubTitle subTitle="who I am what I can what I've done" width={24} />
+                <Title title="with GRIT" width={33} beforeHeight={5} />
+                <SubTitle subTitle="I made this app in 2023 Sep" width={25} />
                 <SeeMore url="/profile" />
             </SDiv>
         </SSection>

@@ -6,13 +6,13 @@ import { SeeMore } from "./SeeMore";
 import { Rectangle } from "./Rectangle";
 
 
-export const Profile = () => {
+export const Vision = () => {
     return (
         <SSection>
-            <Rectangle src="baby.png" />
+            <Rectangle src="vision.png" />
             <SDiv>
-                <Title title="Profile" width={33} beforeHeight={5} />
-                <SubTitle subTitle="who I am what I can what I've done" width={24} />
+                <Title title="Vision" width={33} beforeHeight={5} />
+                <SubTitle subTitle="image of my future" width={30} />
                 <SeeMore url="/profile" />
             </SDiv>
         </SSection>
