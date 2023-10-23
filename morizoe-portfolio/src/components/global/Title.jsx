@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const Title = (props) => {
-    const { title, width } = props;
+    const { title, width, beforeHeight } = props;
     return (
 
-        <SH2 $width={width}>
+        <SH2 $width={width} $beforeHeight={beforeHeight}>
             {title}
         </SH2>
 
@@ -22,7 +22,7 @@ const SH2 = styled.h2`
     &::before {	
         content: "";
         width: 11px;
-        height: 12.5rem;
+        height: ${props => props.$beforeHeight}rem;
         position: absolute;
         top: 1.5rem;
         left: 0rem;

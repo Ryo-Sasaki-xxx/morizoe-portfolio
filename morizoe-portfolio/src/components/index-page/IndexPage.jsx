@@ -1,4 +1,5 @@
 import { Header } from "../global/Header";
+import { Profile } from "./Profile";
 import { Top } from "./Top";
 
 export const IndexPage = () => {
@@ -6,6 +7,7 @@ export const IndexPage = () => {
         <>
             <Header theme={"white"} />
             <Top />
+            <Profile />
         </>
     );
 };

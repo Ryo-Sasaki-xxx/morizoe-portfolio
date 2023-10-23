@@ -2,15 +2,18 @@ import styled from "styled-components";
 
 import { Title } from "../global/Title";
 import { SubTitle } from "../global/SubTitle";
-import { Planet } from "./Planet";
+import { SeeMore } from "./SeeMore";
+import { Rectangle } from "./Rectangle";
 
-export const Top = () => {
+
+export const Profile = () => {
     return (
         <SSection>
-            <Planet />
+            <Rectangle src="baby.png" />
             <SDiv>
-                <Title title="Ryo Sasaki" width={22} beforeHeight={12.5} />
-                <SubTitle subTitle="economic student engineer" width={28} />
+                <Title title="Profile" width={22} beforeHeight={5} />
+                <SubTitle subTitle="who I am what I can what I've done" width={24} />
+                <SeeMore url="/profile" />
             </SDiv>
         </SSection>
     );
@@ -34,4 +37,5 @@ const SDiv = styled.div`
     width: fit-content;
     z-index: 97;
     margin-top: 6rem;
+    margin-right: 4rem;
 `;
