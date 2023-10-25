@@ -57,6 +57,7 @@ const SH1 = styled.h1`
     font-size: 1.5rem;
     font-weight: 500;
     width: fit-content;
+    height: fit-content;
 `;
 
 const SA1 = styled(Link)`

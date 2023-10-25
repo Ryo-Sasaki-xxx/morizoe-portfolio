@@ -43,7 +43,7 @@ const GlobalStyle = createGlobalStyle`
   body {
       font-family: 'Montserrat Alternates', sans-serif;
       font-family: 'Noto Sans JP', sans-serif;
-      line-height: 1.7;
+      line-height: 1.3;
       color: #333;
   }
 
