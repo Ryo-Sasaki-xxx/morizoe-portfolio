@@ -58,6 +58,17 @@ const SH1 = styled.h1`
     font-weight: 500;
     width: fit-content;
     height: fit-content;
+    transition: .3s;
+    @media (hover: hover) {
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+    @media (hover: none) {
+        &:active {
+            opacity: 0.5;
+        }
+    }
 `;
 
 const SA1 = styled(Link)`
@@ -82,6 +93,7 @@ const SA2 = styled.a`
 const SImg = styled.img`
     vertical-align: middle;
     width: 2rem;
+    transition: .3s;
     @media (hover: hover) {
         &:hover {
             opacity: 0.5;
@@ -101,6 +113,7 @@ const SButton = styled.button`
     margin-left: 3rem;
     width: 2.5rem;
     height: 2rem;
+    transition: .3s;
     @media (hover: hover) {
         &:hover {
             opacity: 0.5;

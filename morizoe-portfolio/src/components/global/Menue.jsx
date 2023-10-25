@@ -80,6 +80,7 @@ const SA = styled(Link)`
     font-size: 6rem;
     font-family: 'Montserrat Alternates', sans-serif;
     color: ${props => props.$color};
+    transition: .3s;
     @media (hover: hover) {
         &:hover {
             opacity: 0.5;
