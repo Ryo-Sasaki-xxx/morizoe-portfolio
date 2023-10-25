@@ -5,21 +5,38 @@ import { SubTitle } from "../global/SubTitle";
 import { SeeMore } from "./SeeMore";
 import { Rectangle } from "./Rectangle";
 
+import { useInView } from 'react-intersection-observer';
+import { useEffect } from "react";
+import { forwardRef } from "react";
 
-export const WithGRIT = () => {
+
+export const WithGRIT = forwardRef((props, withGritRef) => {
+    const { setPageNation } = props;
+    const { ref, inView } = useInView({
+        threshold: 0.5,
+    });
+    useEffect(() => {
+        setPageNation((prev) => {
+            const current = [...prev];
+            current[2] = !prev[2]
+            return (current);
+        })
+    }, [inView])
+
     return (
-        <SSection>
+        <SSection ref={ref}>
             <Rectangle src="with-grit.png" />
-            <SDiv>
+            <SDiv ref={withGritRef}>
                 <Title title="with GRIT" width={33} beforeHeight={5} />
                 <SubTitle subTitle="I made this app in 2023 Sep" width={25} />
                 <SeeMore url="/profile" />
             </SDiv>
         </SSection>
     );
-};
+});
 
 const SSection = styled.section`
+    scroll-snap-align: start;
     position: relative;
     height: 100vh;
     padding: 0rem 2rem 5rem;

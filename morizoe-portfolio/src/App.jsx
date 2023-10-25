@@ -13,45 +13,47 @@ import { DetailPages } from "./components/detail-pages/DeatailPages";
 
 export const App = () => {
   return (
-    <BrowserRouter>
+    <>
       <GlobalStyle />
-      <Routes>
-        <Route path="" element={<IndexPage />}>
-        </Route>
-        <Route path="/" element={<DetailPages />}>
-          <Route path="profile">
-
+      <BrowserRouter>
+        <Routes>
+          <Route path="" element={<IndexPage />}>
           </Route>
-          <Route path="with-grit">
+          <Route path="/" element={<DetailPages />}>
+            <Route path="profile">
 
-          </Route>
-          <Route path="vision">
+            </Route>
+            <Route path="with-grit">
 
+            </Route>
+            <Route path="vision">
+
+            </Route>
           </Route>
-        </Route>
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
 const GlobalStyle = createGlobalStyle`
-  ${reset}
-  html {
-      font-size: 100%;
-  }
+${reset}
+html {
+    font-size: 100%;
+}
 
-  body {
-      font-family: 'Montserrat Alternates', sans-serif;
-      font-family: 'Noto Sans JP', sans-serif;
-      line-height: 1.3;
-      color: #333;
-  }
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.3;
+    color: #333;
+}
 
-  a {
-      text-decoration: none;
-  }
+a {
+    text-decoration: none;
+}
 
-  img {
-      max-width: 100%;
-  }
+img {
+    max-width: 100%;
+}
 `;
