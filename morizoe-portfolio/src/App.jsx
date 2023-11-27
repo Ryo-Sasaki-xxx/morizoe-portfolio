@@ -6,7 +6,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-
+ffff
 import { IndexPage } from "./components/index-page/IndexPage";
 import { DetailPages } from "./components/detail-pages/DeatailPages";
 
